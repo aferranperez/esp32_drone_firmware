@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Este repositorio contiene el firmware para un drone cuadricóptero controlado por una placa ESP32. El código fuente se ha desarrollado utilizando [lenguaje de programación] y está diseñado para proporcionar un vuelo estable y fácil de controlar.
+Este repositorio contiene el firmware para un drone cuadricóptero controlado por una placa ESP32. El código fuente se ha desarrollado utilizando [C/C++, Platformio] y está diseñado para proporcionar un vuelo estable y fácil de controlar.
 
 ### Características
 1. Control de vuelo: Implementación de algoritmos de control PID para estabilizar el vuelo y responder a las entradas del piloto.
