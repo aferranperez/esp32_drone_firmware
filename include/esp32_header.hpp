@@ -1,8 +1,15 @@
 /**
  * Definimos los pines I/O del ESP32 
  **/ 
-#define LED 12
+#define LED 18
 #define MQTTLED 13
+
+
+/**
+ * Zona EEPROM
+ */
+#define Start_Address 0
+#define Restart_Address Start_Address + sizeof(int)
 
 /**
  * Calcular la capacidad del JSON

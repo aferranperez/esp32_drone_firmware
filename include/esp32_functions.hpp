@@ -16,7 +16,7 @@ String platform(){
 }
 
 // -----------------------------------
-// De HEX a String
+// Convert HEX to String
 // -----------------------------------
 String hexStr(const unsigned long &h, const byte &L = 8){
     String s;
@@ -27,10 +27,10 @@ String hexStr(const unsigned long &h, const byte &L = 8){
 }
 
 // ------------------------------------
-// Crear un ID unico desde la direccion MAC
+// Create a unique ID for the device
 // ------------------------------------
 String idUnique(){
-    // Retorna los ultimos 4 Bytes del MAC rotados
+    // Return the last 4 bytes of the MAC rotated
     char idunique[15];
     uint64_t chipid = ESP.getEfuseMac();
     uint16_t chip = (uint16_t)(chipid >> 32);
@@ -40,10 +40,10 @@ String idUnique(){
 
 
 // -------------------------------------
-// Numero de serie del dispositivo
-// Se garantiza que el ID sea unico en cada dispositivo
+// Number of the device
+// Garantees that the ID is unique on each device
 // -------------------------------------
 String deviceID(){
-    // return String( platform()) + hexStr(ESP.getEfuseMac() + idUnique());
-    return String( platform()) + hexStr(ESP.getEfuseMac());
+    return String(platform()) + hexStr(ESP.getEfuseMac()) + String(idUnique());
+    //return String( platform()) + hexStr(ESP.getEfuseMac());
 }

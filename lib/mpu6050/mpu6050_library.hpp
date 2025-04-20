@@ -10,6 +10,7 @@ class MPU6050_Library {
         MPU6050_Library();
         bool begin();
         void readSensorData(sensors_event_t *a, sensors_event_t *g, sensors_event_t *t);
+        void showSensorData(sensors_event_t *a, sensors_event_t *g, sensors_event_t *t);
     private:
         Adafruit_MPU6050 mpu;
 };
